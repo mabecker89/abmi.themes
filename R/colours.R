@@ -4,7 +4,10 @@
 #'
 #' @return A name vector of hex colors
 #' @export
-#' @example abmi_cols("rhino", "pewter", "locust")
+#' @examples
+#' \donttest{
+#' abmi_cols("rhino", "pewter", "locust")
+#' }
 
 abmi_cols <- function(...) {
 
@@ -47,10 +50,13 @@ abmi_cols <- function(...) {
 #' @param palette Character name of palette in abmi_palettes
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette() (e.g. alpha value)
-#'
-#' @return A list of hex colours
+#' @importFrom grDevices colorRampPalette
 #' @export
-#' @example abmi_pal(palette = "main", reverse = FALSE)
+#' @examples
+#' \donttest{
+#' abmi_pal(palette = "main", reverse = FALSE)
+#' }
+#' #' @return A list of hex colours
 
 abmi_pal <- function(palette = "main", reverse = FALSE, ...) {
 
@@ -76,7 +82,7 @@ abmi_pal <- function(palette = "main", reverse = FALSE, ...) {
 
   if (reverse) pal <- rev(pal)
 
-  colorRampPalette(pal, ...)
+  grDevices::colorRampPalette(pal, ...)
 
 }
 

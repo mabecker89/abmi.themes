@@ -6,3 +6,5 @@
 #' @docType package
 #' @name abmi.themes
 "_PACKAGE"
+
+utils::globalVariables(c("base", "font_families", "font_add_google"))

@@ -6,7 +6,7 @@
 \usage{
 add_logo(
   plot_name,
-  logo_image_path = file.path(system.file("data", package = "abmi.themes"),
+  logo_image_path = file.path(system.file("inst/extdata", package = "abmi.themes"),
     "horizontal-logo-acronym.png")
 )
 }

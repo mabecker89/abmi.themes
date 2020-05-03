@@ -13,9 +13,12 @@ abmi_pal(palette = "main", reverse = FALSE, ...)
 
 \item{...}{Additional arguments to pass to colorRampPalette() (e.g. alpha value)}
 }
-\value{
-A list of hex colours
-}
 \description{
 Return function to interpolate an ABMI color palette
+}
+\examples{
+\donttest{
+abmi_pal(palette = "main", reverse = FALSE)
+}
+#' @return A list of hex colours
 }

@@ -15,3 +15,8 @@ A name vector of hex colors
 \description{
 Function to extract ABMI colours as hex codes
 }
+\examples{
+\donttest{
+abmi_cols("rhino", "pewter", "locust")
+}
+}

@@ -1,7 +1,7 @@
 #' Add custom ABMI theme to a ggplot graphic
 #'
 #' @param font Defaults to "Montserrat"; alternative is "Domine"
-#' @import ggplot2 sysfonts showtext
+#' @import ggplot2 showtext
 #' @export
 #'
 #' @examples
@@ -18,14 +18,14 @@ theme_abmi <- function(font = "Montserrat") {
   }
 
   if(font == "Montserrat") {
-    if(!"Montserrat" %in% sysfonts::font_families()) {
-      sysfonts::font_add_google("Montserrat")
+    if(!"Montserrat" %in% font_families()) {
+      font_add_google("Montserrat")
     }
   }
 
   if(font == "Domine") {
-    if(!"Domine" %in% sysfonts::font_families()) {
-      sysfonts::font_add_google("Domine")
+    if(!"Domine" %in% font_families()) {
+      font_add_google("Domine")
     }
   }
 
