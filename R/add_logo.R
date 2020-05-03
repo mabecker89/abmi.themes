@@ -14,7 +14,7 @@
 #' }
 
 add_logo <- function (plot_name,
-                      logo_image_path = file.path(system.file("data", package = "abmi.themes"), "horizontal-logo-acronym.png")) {
+                      logo_image_path = file.path(system.file("inst/extdata", package = "abmi.themes"), "horizontal-logo-acronym.png")) {
 
   # Make footer
   footer <- grid::grobTree(grid::rasterGrob(png::readPNG(logo_image_path), x = 0.920))
