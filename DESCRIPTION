@@ -13,6 +13,7 @@ Imports:
   showtext,
   grid,
   ggpubr,
-  png
+  png,
+  sysfonts
 URL: https://github.com/mabecker89/abmi.themes
 RoxygenNote: 7.1.0

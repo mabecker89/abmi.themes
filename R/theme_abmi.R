@@ -2,6 +2,7 @@
 #'
 #' @param font Defaults to "Montserrat"; alternative is "Domine"
 #' @import ggplot2 showtext
+#' @importFrom sysfonts font_families font_add_google
 #' @export
 #'
 #' @examples
@@ -17,23 +18,25 @@ theme_abmi <- function(font = "Montserrat") {
     stop("Please chooose one of the ABMI's official web fonts: Montserrat or Domine.")
   }
 
+  y <- sysfonts::font_families()
+
   if(font == "Montserrat") {
-    if(!"Montserrat" %in% font_families()) {
-      font_add_google("Montserrat")
+    if(!"Montserrat" %in% y) {
+      sysfonts::font_add_google("Montserrat")
     }
   }
 
   if(font == "Domine") {
-    if(!"Domine" %in% font_families()) {
-      font_add_google("Domine")
+    if(!"Domine" %in% y) {
+      sysfonts::font_add_google("Domine")
     }
   }
 
   showtext::showtext_auto()
 
-  base_size <- 12
-  double_base <- base_size * 2
-  half_base <- base_size / 2
+  base <- 12
+  double_base <- base * 2
+  half_base <- base / 2
 
   ggplot2::theme(
 
@@ -46,7 +49,7 @@ theme_abmi <- function(font = "Montserrat") {
                               color = "#242222",
                               lineheight = 1.2),
     # Subtitle format:
-    plot.subtitle = ggplot2::element_text(size = ggplot2::rel(1.2),
+    plot.subtitle = ggplot2::element_text(size = ggplot2::rel(1.1),
                                  color = "#242222",
                                  lineheight = 1.2,
                                  margin = ggplot2::margin(half_base, 0, base, 0)),

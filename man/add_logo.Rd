@@ -6,14 +6,17 @@
 \usage{
 add_logo(
   plot_name,
-  logo_image_path = file.path(system.file("inst/extdata", package = "abmi.themes"),
-    "horizontal-logo-acronym.png")
+  logo_image_path = file.path(system.file("extdata", package = "abmi.themes"),
+    "horizontal-logo-acronym.PNG"),
+  logo_position = 0.925
 )
 }
 \arguments{
 \item{plot_name}{The variable name of the plot you have created}
 
 \item{logo_image_path}{File path for the logo image you want to use in the right hand side of your plot, which needs to be a PNG file; defaults to the ABMI's primary horizontal acronym logo that is stored in the data\ folder of this package}
+
+\item{logo_position}{A numeric vector or unit object specifying x-location of logo; defaults to 0.925 (right justified)}
 }
 \value{
 This function returns your plot with the ABMI logo at the bottom right

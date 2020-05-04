@@ -1,3 +1,22 @@
+# ABMI colours
+abmi_colours <- c(
+
+  # Main palette
+  `rhino` = "#2D415B",
+  `pewter` = "#95A09A",
+  `locust` = "#A8AF8C",
+
+  # Secondary colours
+  `pearl bush` = "#EAE4D7",
+  `indian khaki` = "#C2A492",
+  `tonys pink` = "#E8A396",
+  `shadow green` = "#97C6C3",
+  `nepal` = "#829EBC",
+  `fiord` = "#4E5971",
+  `mamba` = "#9A839C"
+
+)
+
 #' Function to extract ABMI colours as hex codes
 #'
 #' @param ... Character names of abmi_colours
@@ -11,32 +30,6 @@
 
 abmi_cols <- function(...) {
 
-  abmi_colours <- c(
-
-    # Main palette
-    `rhino` = "#2D415B",
-    `pewter` = "#95A09A",
-    `locust` = "#A8AF8C",
-
-    # Secondary colours
-    `pearl bush` = "#EAE4D7",
-    `indian khaki` = "#C2A492",
-    `tonys pink` = "#E8A396",
-    `shadow green` = "#97C6C3",
-    `nepal` = "#829EBC",
-    `fiord` = "#4E5971",
-    `mamba` = "#9A839C",
-
-    # Tertiary colours
-    `mandy` = "#DC4F55",
-    `spice` = "#6E4830",
-    `summer green` = "#8BBAA3",
-    `tapestry` = "#B4549F",
-    `costa del sol` = "#5F682D",
-    `marigold` = "#BC862F"
-
-  )
-
   cols <- c(...)
 
   if (is.null(cols))
@@ -44,6 +37,22 @@ abmi_cols <- function(...) {
 
   abmi_colours[cols]
 }
+
+# ABMI palettes
+abmi_palettes <- list(
+
+  `main` = abmi_cols("rhino", "pewter", "locust"),
+
+  `lichen` = abmi_cols("locust", "indian khaki", "tonys pink", "pearl bush"),
+
+  `mountains` = abmi_cols("rhino", "pewter", "shadow green", "nepal"),
+
+  `flowers` = abmi_cols("pewter", "fiord", "mamba", "pearl bush"),
+
+  `birds` = abmi_cols("rhino", "nepal", "indian khaki", "tonys pink")
+
+)
+
 
 #' Return function to interpolate an ABMI color palette
 #'
@@ -59,24 +68,6 @@ abmi_cols <- function(...) {
 #' #' @return A list of hex colours
 
 abmi_pal <- function(palette = "main", reverse = FALSE, ...) {
-
-  abmi_palettes <- list(
-
-    `main` = abmi_cols("rhino", "pewter", "locust"),
-
-    `vegetation` = abmi_cols("pewter", "pearl bush", "indian khaki", "tonys pink"),
-
-    `mountains` = abmi_cols("rhino", "pewter", "shadow green", "nepal"),
-
-    `flowers` = abmi_cols("locust", "fiord", "mamba", "pearl bush"),
-
-    `birds` = abmi_cols("rhino", "nepal", "tonys pink", "indian khaki"),
-
-    `vegetation full` = abmi_cols("pewter", "pearl bush", "indian khaki", "tonys pink", "mandy", "spice", "summer green"),
-
-    `flowers full` = abmi_cols("locust", "fiord", "mamba", "pearl bush", "tapestry", "costa del sol", "marigold")
-
-  )
 
   pal <- abmi_palettes[[palette]]
 
@@ -127,6 +118,28 @@ scale_fill_abmi <- function(palette = "main", discrete = TRUE, reverse = FALSE, 
     ggplot2::scale_fill_gradientn(colours = pal(256), ...)
   }
 }
+
+#' Print palette
+#'
+#' @param x The palette as a character vector of hex codes
+#' @param ... Arguments to pass to \code{image()}
+#' @importFrom graphics image par
+#'
+#' @return An image of the requested colour palette
+#' @export
+#'
+
+print_palette <- function(x, ...) {
+
+  n <- length(x)
+  old <- par(mar = c(0.5, 0.5, 0.5, 0.5))
+  on.exit(par(old))
+
+  image(1:n, 1, as.matrix(1:n), col = x, ylab = "", xaxt = "n", yaxt = "n", bty = "n")
+
+}
+
+
 
 
 
