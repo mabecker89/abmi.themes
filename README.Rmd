@@ -25,7 +25,7 @@ remotes::install_github("mabecker89/abmi.themes")
 
 ### Palettes
 
-There are five available palettes:
+There are 5 available palettes:
 
 + "main" (This is the default, and is built using the ABMI's three main colour values.)
 + "flowers"
