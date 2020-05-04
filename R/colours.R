@@ -19,7 +19,7 @@ abmi_colours <- c(
 
 #' Function to extract ABMI colours as hex codes
 #'
-#' @param ... Character names of abmi_colours
+#' @param ... Character names of abmi_colours (case insensitive, partial matching allowed)
 #'
 #' @return A name vector of hex colors
 #' @export
@@ -35,6 +35,8 @@ abmi_cols <- function(...) {
   if (is.null(cols))
     return (abmi_colours)
 
+  cols <- match.arg(tolower(cols), names(abmi_colours),
+                    several.ok = TRUE) # allow partial matching
   abmi_colours[cols]
 }
 
