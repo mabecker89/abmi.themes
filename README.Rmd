@@ -98,7 +98,7 @@ Finally, `add_logo()` takes a plot object and adds an ABMI logo to (by default) 
 
 ### Example Plots
 
-```{r, include=TRUE, eval=TRUE, fig.showtext=TRUE}
+```{r, include=TRUE, eval=TRUE, fig.showtext=TRUE, out.width="70%"}
 library(ggplot2)
 library(abmi.themes)
 
@@ -124,7 +124,7 @@ add_logo(p1)
 
 ```
 
-```{r, include=TRUE, eval=TRUE, fig.showtext=TRUE}
+```{r, include=TRUE, eval=TRUE, fig.showtext=TRUE, out.width="70%"}
 
 # Create plot
 p2 <- ggplot(dep, aes(x = year, y = n, fill = year)) +

@@ -117,7 +117,7 @@ p1 <- p +
 add_logo(p1)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-7-1.png)
+<img src="README_files/figure-markdown_github/unnamed-chunk-7-1.png" width="70%" />
 
 ``` r
 # Create plot
@@ -139,4 +139,4 @@ p3 <- p2 +
 add_logo(p3)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-8-1.png)
+<img src="README_files/figure-markdown_github/unnamed-chunk-8-1.png" width="70%" />
