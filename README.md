@@ -76,6 +76,8 @@ The ABMI has two official web fonts:
 -   [Montserrat](https://fonts.google.com/specimen/Montserrat)
 -   [Domine](https://fonts.google.com/specimen/Domine)
 
+These can accessed using the function `theme_abmi()`, discussed below.
+
 Usage
 -----
 
@@ -83,7 +85,7 @@ There are four functions from this package that can be used to produce graphics 
 
 The first two are fill and colour constructors that can be used to add the above palettes to a ggplot's aesthetics. Like other `scale_fill_*` or `scale_colour_*` functions from ggplot2, they can be added to a ggplot2 chain and take the palette name as an argument. The user can also reverse the palette with the `reverse` argument.
 
-The third function, `theme_abmi()` is used to access one of the two official ABMI web fonts ("Montserrat", the default, or "Domine", the alternative). Like other ggplot2 themes, `theme_abmi()` provides a sensible default option (with respect to font sizes, margins, etc). However, the user can override these defaults by simply chaining (`+`) another `theme()` call afterwards and re-specifying certain elements.
+The third function, `theme_abmi()` is used to access one of the two official ABMI web fonts ("Montserrat", the default, or "Domine", the alternative). Like other ggplot2 themes (e.g. `theme_minimal()`, `theme_light()`), `theme_abmi()` provides a sensible default option (with respect to font sizes, margins, etc). However, the user can override these defaults by simply chaining (`+`) another `theme()` call afterwards and re-specifying certain elements.
 
 Finally, `add_logo()` takes a plot object and adds an ABMI logo to (by default) the bottom right of the plot. More options (i.e. logos) will be added to the package in time, although the user can specify an alternative path to a logo of their choosing using the `logo_image_path` argument.
 
@@ -91,7 +93,6 @@ Finally, `add_logo()` takes a plot object and adds an ABMI logo to (by default) 
 
 ``` r
 library(ggplot2)
-library(showtext)
 
 # Create plot
 p <- ggplot(mammals, aes(x = common_name, y = images, fill = common_name)) +

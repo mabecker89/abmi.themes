@@ -35,7 +35,7 @@ There are five available palettes:
 
 These can be explored using the `abmi_pal()` and `print_palette()` functions within the console.
 
-```{r, fig.height=2, fig.width=6}
+```{r, fig.height=1.5, fig.width=5}
 
 library(abmi.themes)
 
@@ -47,7 +47,7 @@ print_palette(pal)
 
 The "flowers" palette:
 
-```{r, fig.height=2, fig.width=6}
+```{r, fig.height=1.5, fig.width=5}
 
 print_palette(abmi_pal("flowers")(5))
 
@@ -55,7 +55,7 @@ print_palette(abmi_pal("flowers")(5))
 
 The "mountains" palette:
 
-```{r, fig.height=2, fig.width=6}
+```{r, fig.height=1.5, fig.width=5}
 
 print_palette(abmi_pal("mountains")(5))
 
@@ -63,7 +63,7 @@ print_palette(abmi_pal("mountains")(5))
 
 The "lichen" palette:
 
-```{r, fig.height=2, fig.width=6}
+```{r, fig.height=1.5, fig.width=5}
 
 print_palette(abmi_pal("lichen")(5))
 
@@ -71,7 +71,7 @@ print_palette(abmi_pal("lichen")(5))
 
 The "birds" palette:
 
-```{r, fig.height=2, fig.width=6}
+```{r, fig.height=1.5, fig.width=5}
 
 print_palette(abmi_pal("birds")(6))
 
@@ -84,22 +84,23 @@ The ABMI has two official web fonts:
 + [Montserrat](https://fonts.google.com/specimen/Montserrat)
 + [Domine](https://fonts.google.com/specimen/Domine)
 
+These can accessed using the function `theme_abmi()`, discussed below. 
+
 ## Usage
 
 There are four functions from this package that can be used to produce graphics with an ABMI theme: `scale_fill_abmi()`, `scale_colour_abmi()`, `theme_abmi()`, and `add_logo()`. 
 
 The first two are fill and colour constructors that can be used to add the above palettes to a ggplot's aesthetics. Like other `scale_fill_*` or `scale_colour_*` functions from ggplot2, they can be added to a ggplot2 chain and take the palette name as an argument. The user can also reverse the palette with the `reverse` argument.
 
-The third function, `theme_abmi()` is used to access one of the two official ABMI web fonts ("Montserrat", the default, or "Domine", the alternative). Like other ggplot2 themes, `theme_abmi()` provides a sensible default option (with respect to font sizes, margins, etc). However, the user can override these defaults by simply chaining (`+`) another `theme()` call afterwards and re-specifying certain elements. 
+The third function, `theme_abmi()` is used to access one of the two official ABMI web fonts ("Montserrat", the default, or "Domine", the alternative). Like other ggplot2 themes (e.g. `theme_minimal()`, `theme_light()`), `theme_abmi()` provides a sensible default option (with respect to font sizes, margins, etc). However, the user can override these defaults by simply chaining (`+`) another `theme()` call afterwards and re-specifying certain elements. 
 
 Finally, `add_logo()` takes a plot object and adds an ABMI logo to (by default) the bottom right of the plot. More options (i.e. logos) will be added to the package in time, although the user can specify an alternative path to a logo of their choosing using the `logo_image_path` argument.
 
 ### Example Plots
 
-```{r, include=TRUE, eval=TRUE}
+```{r, include=TRUE, eval=TRUE, fig.showtext=TRUE}
 
 library(ggplot2)
-library(showtext)
 
 # Create plot
 p <- ggplot(mammals, aes(x = common_name, y = images, fill = common_name)) +
@@ -123,7 +124,7 @@ add_logo(p1)
 
 ```
 
-```{r, include=TRUE, eval=TRUE}
+```{r, include=TRUE, eval=TRUE, fig.showtext=TRUE}
 
 # Create plot
 p2 <- ggplot(dep, aes(x = year, y = n, fill = year)) +
