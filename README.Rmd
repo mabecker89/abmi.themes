@@ -36,7 +36,7 @@ There are 5 available palettes:
 These can be explored using the `abmi_pal()` and `print_palette()` functions within the console.
 
 ```{r, fig.height=1.5, fig.width=5}
-
+library(ggplot2)
 library(abmi.themes)
 
 # Define palette and the number of categories to interpolate to.
@@ -99,8 +99,8 @@ Finally, `add_logo()` takes a plot object and adds an ABMI logo to (by default) 
 ### Example Plots
 
 ```{r, include=TRUE, eval=TRUE, fig.showtext=TRUE}
-
 library(ggplot2)
+library(abmi.themes)
 
 # Create plot
 p <- ggplot(mammals, aes(x = common_name, y = images, fill = common_name)) +
