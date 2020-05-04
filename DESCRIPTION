@@ -2,7 +2,15 @@ Package: abmi.themes
 Title: Making ABMI-themed ggplot2 graphics
 Version: 0.0.0.9000
 Authors@R: 
-  c(person(given = "Marcus", family = "Becker", email = "mabecker@ualberta.ca", role = c("aut", "cre")))
+  c(person(given = "Marcus", 
+           family = "Becker", 
+           email = "mabecker@ualberta.ca", 
+           role = c("aut", "cre")),
+    person(given = "Peter",
+           family = "Solymos",
+           comment = c(ORCID = "0000-0001-7337-1740"),
+           role = c("aut"),
+           email = "solymos@ualberta.ca"))
 Description: This package provides ABMI staff with access to colour palettes and web fonts outlined in the Brand Guidelines, which can be used when making graphics wiht ggplot2. A default ABMI ggplot2 theme is also provided.
 Depends: R (>= 3.5.0)
 License: GPL-2
@@ -16,4 +24,5 @@ Imports:
   png,
   sysfonts
 URL: https://github.com/mabecker89/abmi.themes
+BugReports: https://github.com/mabecker89/abmi.themes/issues
 RoxygenNote: 7.1.0
