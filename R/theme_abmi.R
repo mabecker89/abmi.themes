@@ -10,9 +10,9 @@
 #' p + theme_abmi()
 #' }
 
-theme_abmi <- function(font = c("montserrat", "domine")) {
+theme_abmi <- function(font = "montserrat") {
 
-  font <- match.arg(tolower(font))
+  font <- match.arg(tolower(font), c("montserrat", "domine"))
 
   y <- sysfonts::font_families()
 
