@@ -1,7 +1,7 @@
 ---
 output: 
   github_document:
-    html_preview: false
+    html_preview: true
 ---
 
 ```{r setup, include=FALSE}
