@@ -7,7 +7,7 @@
 abmi_cols(...)
 }
 \arguments{
-\item{...}{Character names of abmi_colours}
+\item{...}{Character names of abmi_colours (case insensitive, partial matching allowed)}
 }
 \value{
 A name vector of hex colors

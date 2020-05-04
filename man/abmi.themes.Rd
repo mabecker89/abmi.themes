@@ -12,6 +12,7 @@ This package provides ABMI staff with access to colour palettes and web fonts ou
 Useful links:
 \itemize{
   \item \url{https://github.com/mabecker89/abmi.themes}
+  \item Report bugs at \url{https://github.com/mabecker89/abmi.themes/issues}
 }
 
 }
