@@ -115,7 +115,7 @@ p <- ggplot(mammals, aes(x = common_name, y = images, fill = common_name)) +
 
 # Change to ABMI theme, remove legend, and use the "main" palette
 p1 <- p + 
-  theme_abmi() +
+  theme_abmi(font = "montserrat") +
   theme(legend.position = "none") +
   scale_fill_abmi(palette = "main", reverse = TRUE)
 
