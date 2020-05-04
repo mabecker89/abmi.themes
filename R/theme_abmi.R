@@ -16,14 +16,14 @@ theme_abmi <- function(font = c("montserrat", "domine")) {
 
   y <- sysfonts::font_families()
 
-  if(font == "Montserrat") {
-    if(!"Montserrat" %in% y) {
+  if(font == "montserrat") {
+    if(!"montserrat" %in% y) {
       sysfonts::font_add_google("Montserrat")
     }
   }
 
-  if(font == "Domine") {
-    if(!"Domine" %in% y) {
+  if(font == "domine") {
+    if(!"domine" %in% y) {
       sysfonts::font_add_google("Domine")
     }
   }
