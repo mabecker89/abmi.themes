@@ -34,14 +34,20 @@ add_logo <- function (plot_name,
   }
 
   if(logo == "full" & logo_position >= 0.900) {
-    message("With the current position value, your logo will be partially cut off. If you want it in the bottom right, a good default position when using the full logo is 0.875")
+    message("With the current position value, your logo will be partially cut off. If you want it in the bottom right, a good default position when using the full logo is 0.825")
   }
 
   # Make footer
   footer <- grid::grobTree(grid::rasterGrob(png::readPNG(logo_image_path), x = logo_position))
 
+  # Adjust logo height
+  if(logo == "full") {
+    logo_height <- 0.065
+  } else
+    logo_height <- 0.045
+
   # Arrange
-  plot_with_logo <- ggpubr::ggarrange(plot_name, footer, ncol = 1, nrow = 2, heights = c(1, 0.045))
+  plot_with_logo <- ggpubr::ggarrange(plot_name, footer, ncol = 1, nrow = 2, heights = c(1, logo_height))
 
   return(plot_with_logo)
 
