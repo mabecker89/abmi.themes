@@ -8,7 +8,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE, include=TRUE, message=FALSE, warning=FALSE, eval=TRUE)
 ```
 
-# abmi.themes
+# abmi.themes <img src="inst/extdata/ABMI-notext.png" align="right" height="100" width="100" />
 
 > Make ABMI-themed ggplot2 graphics
 

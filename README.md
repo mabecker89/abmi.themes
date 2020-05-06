@@ -1,6 +1,6 @@
 
-abmi.themes
-===========
+abmi.themes <img src="inst/extdata/ABMI-notext.png" align="right" height="100" width="100" />
+=============================================================================================
 
 > Make ABMI-themed ggplot2 graphics
 
