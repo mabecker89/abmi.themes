@@ -4,17 +4,12 @@
 \alias{add_logo}
 \title{Add ABMI logo to the bottom of the plot}
 \usage{
-add_logo(
-  plot_name,
-  logo_image_path = file.path(system.file("extdata", package = "abmi.themes"),
-    "horizontal-logo-acronym.PNG"),
-  logo_position = 0.925
-)
+add_logo(plot_name, logo = "acronym", logo_position = 0.925)
 }
 \arguments{
 \item{plot_name}{The variable name of the plot you have created}
 
-\item{logo_image_path}{File path for the logo image you want to use in the right hand side of your plot, which needs to be a PNG file; defaults to the ABMI's primary horizontal acronym logo that is stored in the data\ folder of this package}
+\item{logo}{Character; Specify which logo you want (see details below)}
 
 \item{logo_position}{A numeric vector or unit object specifying x-location of logo; defaults to 0.925 (right justified)}
 }
@@ -24,8 +19,16 @@ This function returns your plot with the ABMI logo at the bottom right
 \description{
 Add ABMI logo to the bottom of the plot
 }
+\details{
+Valid values for the \code{logo} argument currently are:
+\itemize{
+\item "acronym" (default)
+\item "full"
+\item Personal file path for a logo image you want to use (needs to be a png file)
+}
+}
 \examples{
 \donttest{
-add_logo(p)
+add_logo(p, logo = "full", logo_position = 0.875)
 }
 }
