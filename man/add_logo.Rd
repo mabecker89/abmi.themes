@@ -28,7 +28,7 @@ Valid values for the \code{logo} argument currently are:
 }
 }
 \examples{
-\donttest{
+\dontrun{
 add_logo(p, logo = "full", logo_position = 0.875)
 }
 }

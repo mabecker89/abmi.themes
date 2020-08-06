@@ -16,7 +16,7 @@
 #' @export
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' add_logo(p, logo = "full", logo_position = 0.875)
 #' }
 

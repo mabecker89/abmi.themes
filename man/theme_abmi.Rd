@@ -4,7 +4,7 @@
 \alias{theme_abmi}
 \title{Add custom ABMI theme to a ggplot graphic}
 \usage{
-theme_abmi(font = "montserrat")
+theme_abmi(font = "Montserrat")
 }
 \arguments{
 \item{font}{Defaults to "montserrat"; alternative is "domine" (case insensitive, partial matching allowed)}
@@ -13,7 +13,7 @@ theme_abmi(font = "montserrat")
 Add custom ABMI theme to a ggplot graphic
 }
 \examples{
-\donttest{
+\dontrun{
 p + theme_abmi()
 }
 }

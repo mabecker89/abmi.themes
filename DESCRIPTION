@@ -22,7 +22,8 @@ Imports:
   grid,
   ggpubr,
   png,
-  sysfonts
+  sysfonts,
+  jsonlite
 URL: https://github.com/mabecker89/abmi.themes
 BugReports: https://github.com/mabecker89/abmi.themes/issues
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
